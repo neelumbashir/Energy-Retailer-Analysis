@@ -55,9 +55,9 @@ Five linked sources, July 2020 to June 2026:
 - Disconnections were about **4.6 times higher** in the most disadvantaged areas.
 - A redesigned letter increased help-seeking by **4.4 percentage points** (95% CI: 2.3 to 6.4).
 
-![Disconnection funnel plot](outputs/figures/stats4a_funnel_disconnections.png)
+   ![Disconnection funnel plot](outputs/figures/figures/stats4a_funnel_disconnections.png)
 
-![Disconnections by disadvantage](outputs/figures/eda8_disconnections_decile.png)
+   ![Disconnections by disadvantage](outputs/figures/figures/eda8_disconnections_decile.png)
 
 ## Data quality
 
