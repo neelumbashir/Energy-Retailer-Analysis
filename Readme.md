@@ -2,7 +2,7 @@
 
 An end-to-end data analysis project in **R**, modelled on how an energy regulator uses retailer data to identify consumer harm and target compliance activity.
 
-📄 **[Read the full report](REPORT_LINK_HERE)**
+📄 **[Read the full report](https://neelumbashir.github.io/Energy-Retailer-Analysis/report.html)**
 
 > **Note:** All data in this project is **synthetic**, created for training and portfolio purposes. It is modelled on the kinds of indicators energy regulators collect. All retailer names are fictional, and any resemblance to real businesses is coincidental.
 
