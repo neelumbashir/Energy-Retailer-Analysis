@@ -1,0 +1,28 @@
+REPORT NOTES
+
+Test 1 - Letter trial (A/B test)
+Customers who received the redesigned letter were significantly more likely to seek assistance within 30 days (22.3% vs 17.9%). The improvement of 4.4 percentage points (95% CI: 2.3 to 6.4) is very unlikely to be due to chance. Because customers were randomly assigned, the difference can be attributed to the letter itself.
+
+Test 2 - Brightwave disconnections without assistance
+Brightwave Energy disconnected 47.9% of customers without first offering tailored assistance, compared with 8.2% across all other retailers, almost six times the rate. The difference is highly statistically significant (p < 0.001) and too large to be explained by chance.
+
+Test3 - Brightwave also disconnected customers over much smaller debts: a median of $425, compared with about $1,240 at other retailers. The difference (about $780, 95% CI: $769 to $792) is highly statistically significant (p < 0.001). Together with its low rate of offering assistance, this suggests Brightwave disconnects customers earlier and for smaller amounts than the rest of the market.
+
+Test4 - A funnel plot, which allows for the fact that smaller retailers' rates vary more by chance, confirms that Brightwave and Nexa disconnect significantly more customers than expected for their size (outside the 99.8% control limits). Brightwave's rate (1.51 per 100 customers in 2024-25) was nearly double the industry rate.
+
+Test 4b - Assistance gap by retailer (funnel plot, 2024-25)
+Nexa Energy had 6.86 customers per 100 in arrears without receiving assistance in 2024-25, about three times the industry rate, and Brightwave Energy had 3.46. Both are well outside the 99.8% funnel limits, so their assistance gaps are very unlikely to be due to chance or their size.
+
+Test 4c - Concession rate by retailer (funnel plot, 2024-25)
+Only 7.99 per 100 Summit Energy customers received a government concession in 2024-25, less than half the industry rate of about 18.5. Summit is far below the 99.8% funnel limits, so this is very unlikely to be due to chance. Combined with its low rate of grant applications, this suggests Summit may not be applying concessions and grants its customers are entitled to.
+Test 5 - Customer service by retailer size (Kruskal-Wallis test with pairwise post-hoc tests)
+Customer service differs significantly by retailer size (Kruskal-Wallis, p < 0.001). Small retailers received the most complaints per customer and answered the fewest calls within 30 seconds, followed by medium and then large retailers; every pair of size groups differs significantly (Holm-adjusted p ≤ 0.003). This suggests smaller retailers may lack the customer-service capacity of larger ones.
+
+Test 6 - Disconnections and area disadvantage (Poisson regression)
+Disconnections are strongly linked to area disadvantage. A Poisson regression of disconnections per postcode (allowing for population) shows that each step towards less disadvantage lowers the disconnection rate by about 15% (p < 0.001), so the most disadvantaged areas have about 4.6 times the rate of the least disadvantaged. Once disadvantage is taken into account, age profile and regional location make no significant difference. Because this is an area-level analysis, it shows where disconnections are concentrated, not that every disconnected customer is disadvantaged.
+
+Test 7 - Complaint resolution times (Kaplan-Meier survival analysis, log-rank test)
+Allowing properly for complaints still open, the median time to resolve a complaint was 7 days at large retailers, 10 days at medium, 16 days at small retailers and 21 days at Nexa Energy (95% CI: 20 to 23 days). The differences are highly statistically significant (log-rank test, p < 0.001). Nexa takes about three times as long as large retailers, consistent with its high rate of complaints escalated to the ombudsman.
+
+Test 8 - Coreline billing complaints over time (change-point analysis)
+Change-point analysis identifies when Coreline Power's billing problem started and ended. Billing complaints averaged about 125 a month until September 2023, then rose to about 388 a month from October 2023 to June 2024, around three times the normal level. They eased to about 277 a month in July to September 2024, and returned to normal (about 129 a month) from October 2024. The timing matches the sharp rise in Coreline's call abandonment, suggesting a billing problem that also overwhelmed its call centre.
