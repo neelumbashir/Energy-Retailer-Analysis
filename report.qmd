@@ -1,0 +1,169 @@
+---
+title: "Victorian Energy Retailer Performance: Customers in Financial Difficulty"
+subtitle: "Analysis of synthetic energy retailer data modelled on regulatory reporting"
+author: "Neelum Bashir"
+date: today
+format:
+  html:
+    toc: true
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Executive summary
+
+This report analyses six years of retailer performance data (July 2020 to June 2026) to assess how energy retailers support customers in financial difficulty: from help with debt and disconnections to concessions, pricing and customer service.
+
+::: {.callout-important title="Headline"}
+Three retailers stand out for failing customers in financial difficulty, and **disconnections fall most heavily on disadvantaged areas**. A low-cost change, a redesigned letter, measurably increased the number of customers seeking help.
+:::
+
+### At a glance
+
+::: {layout-ncol=3}
+::: {.text-center}
+[48%]{style="font-size: 2.5em; font-weight: bold;"}
+
+of Brightwave's disconnections happened **without assistance offered** (8% elsewhere)
+:::
+
+::: {.text-center}
+[4.6×]{style="font-size: 2.5em; font-weight: bold;"}
+
+higher disconnection rate in the **most disadvantaged areas**
+:::
+
+::: {.text-center}
+[+4.4 pts]{style="font-size: 2.5em; font-weight: bold;"}
+
+increase in help-seeking from a **redesigned letter**
+:::
+:::
+
+### Key findings
+
+| Area | Finding |
+|---|---|
+| **Brightwave Energy** | Disconnects at ~2× the industry rate, over smaller debts ($425 vs ~$1,240), often without offering help; 3 life support customers disconnected |
+| **Nexa Energy** | ~3× the industry's share of customers in arrears without assistance; slowest to resolve complaints (21 days) |
+| **Summit Energy** | Less than half the industry's rate of customers receiving concessions; few grant applications |
+| **Coreline Power** | Billing complaints tripled from October 2023 to September 2024 |
+| **Market-wide** | Disconnections concentrated in disadvantaged areas; service weaker at smaller retailers |
+
+All findings were tested statistically and are significant at p < 0.001.
+
+::: {.callout-tip title="Recommendations"}
+1. Prioritise compliance review of **Brightwave's** disconnection practices.
+2. Review **Nexa's** support for customers in arrears and its complaint handling.
+3. Review how **Summit** applies concessions and grants.
+4. Consider requiring the **redesigned letter** across the industry.
+:::
+
+## Background and data
+
+Energy regulators monitor how retailers support customers experiencing payment difficulty. 
+
+The analysis answers five questions:
+
+1. Are customers in debt receiving help?
+2. Are retailers disconnecting customers who should have been supported first?
+3. Are eligible customers receiving concessions?
+4. Are customers paying more than they need to?
+5. Which retailers provide the poorest service?
+
+To answer them, data was drawn from several linked sources:
+
+- quarterly retailer submissions (24 quarters, 20 retailers)
+- 151,041 complaint records
+- 111,278 disconnection records
+- demographic data for 640 Victorian postcodes
+- a randomised trial of two outreach letters (6,000 customers)
+
+## Method
+
+The data was checked for quality (28 issues identified, documented and resolved; see Appendix), cleaned in R, and converted into indicators such as rates per 100 customers. Retailers were compared with the industry average, and findings were tested statistically, including funnel plots, regression, survival analysis and a randomised controlled trial.
+
+## 1. Are customers in debt getting help?
+
+Nexa Energy had 6.86 customers per 100 in arrears without receiving assistance in 2024-25, about three times the industry rate, and Brightwave Energy had 3.46. Both are well outside the 99.8% funnel limits, so their assistance gaps are very unlikely to be due to chance or their size.
+
+![](outputs/figures/stats4b_funnel_assistance_gap.png){width=80%}
+
+## 2. Are retailers disconnecting customers who should have been helped?
+
+Brightwave and Nexa disconnect significantly more customers than expected for their size. Brightwave's rate (1.51 per 100 customers in 2024-25) was nearly double the industry rate.
+
+![](outputs/figures/stats4a_funnel_disconnections.png){width=80%}
+
+Brightwave disconnected 47.9% of customers without first offering tailored assistance, compared with 8.2% across all other retailers (p < 0.001). It also disconnected customers over much smaller debts: a median of $425, compared with about $1,240 elsewhere (difference about $780, 95% CI: $769 to $792; p < 0.001).
+
+![](outputs/figures/eda6_no_assistance.png){width=80%}
+
+Disconnections are also strongly linked to area disadvantage. Each step towards less disadvantage lowers the disconnection rate by about 15% (rate ratio 0.845, 95% CI: 0.843 to 0.847), so the most disadvantaged areas have about 4.6 times the rate of the least. Age profile and regional location made no significant difference.
+
+![](outputs/figures/eda8_disconnections_decile.png){width=80%}
+
+## 3. Are eligible customers getting concessions?
+
+Only 7.99 per 100 Summit Energy customers received a concession in 2024-25, less than half the industry rate of about 18.5. Summit is far below the funnel limits and also made few grant applications, suggesting it may not be applying concessions and grants its customers are entitled to.
+
+![](outputs/figures/stats4c_funnel_concessions.png){width=80%}
+
+## 4. Are customers overpaying?
+
+Everly Energy's customers could save an average of $432 a year by switching to Everly's best offer, about twice as much as at other large retailers, and 20% of its customers are on standing offers. Across the market, larger retailers have more customers on standing offers.
+
+![](outputs/figures/eda4_best_offer.png){width=80%}
+
+## 5. Which retailers perform worst on service?
+
+Service differs significantly by retailer size (Kruskal-Wallis, p < 0.001): small retailers receive the most complaints per customer and answer the fewest calls quickly. Allowing for open complaints, median resolution time was 7 days at large retailers, 10 at medium, 16 at small and 21 at Nexa Energy (log-rank test, p < 0.001).
+
+![](outputs/figures/stats7_resolution_km.png){width=80%}
+
+Coreline Power's billing complaints averaged about 125 a month until September 2023, then rose to about 388 a month from October 2023 to June 2024, before returning to normal from October 2024. Call abandonment rose over the same period.
+
+![](outputs/figures/stats8_coreline_changepoint.png){width=80%}
+
+## Outreach letter trial
+
+Customers who received the redesigned letter were significantly more likely to seek assistance within 30 days (22.3% vs 17.9%). The improvement of 4.4 percentage points (95% CI: 2.3 to 6.4) is very unlikely to be due to chance, and because customers were randomly assigned, it can be attributed to the letter.
+
+![](outputs/figures/eda9_trial.png){width=70%}
+
+## Retailers requiring attention
+
+| Retailer | Concern | Evidence |
+|---|---|---|
+| Brightwave Energy | Disconnection practices | ~2x disconnection rate; 48% without assistance; small debts; 3 life support disconnections |
+| Nexa Energy | Assistance and complaint handling | ~3x assistance gap; slowest complaint resolution (21 days); 1 life support disconnection |
+| Summit Energy | Concessions and grants | Concession rate less than half the industry's; few grant applications |
+| Everly Energy | Customers overpaying | $432 average best-offer saving; 20% on standing offers |
+| Coreline Power | Billing and call centre | Billing complaints tripled Oct 2023 – Sep 2024 |
+
+## Limitations
+
+- The data is synthetic, so findings illustrate the method rather than describe real retailers.
+- Complaints and disconnections without a valid postcode were excluded from the demographic analysis.
+- The definition of customers in arrears without assistance changed in 2023-24, so comparisons across that point use the same-quarter industry average.
+- Disconnection figures for 2020-21 reflect the COVID-19 pause.
+- The demographic analysis is area-level and does not describe individual customers.
+
+## Recommendations
+
+1. **Brightwave Energy:** review disconnection practices, including assistance offered before disconnection and the life support disconnections.
+2. **Nexa Energy:** review how it identifies and supports customers in arrears, and its complaint handling.
+3. **Summit Energy:** review how it applies concessions and grants.
+4. **Industry:** consider requiring the redesigned letter, given its proven effect on help-seeking.
+5. **Monitoring:** continue tracking disconnections in disadvantaged areas.
+
+## Appendix: data quality
+
+28 data quality issues were identified and documented in an issues log, including duplicate complaint records (604), retailer name variants, inconsistent codes and date formats, values reported in the wrong units, and a revised submission. Each was resolved with a recorded decision before analysis.
+
+## Note on the data
+
+All data in this report is synthetic, created for training purposes. It is modelled on the kinds of indicators energy regulators collect, but does not describe any real company. All retailer names are fictional, and any resemblance to real businesses is coincidental.
