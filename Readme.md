@@ -1,4 +1,5 @@
-# Energy Retailer Performance: Customers in Financial Difficulty 📄 **[Read the full report](https://neelumbashir.github.io/Energy-Retailer-Analysis/report.html)**
+# Energy Retailer Performance: Customers in Financial Difficulty  
+**[Read the full report](https://neelumbashir.github.io/Energy-Retailer-Analysis/report.html)**
 
 [![View Dashboard](https://img.shields.io/badge/Power%20BI-View%20Dashboard-F2C811?style=flat&logo=powerbi&logoColor=black)](https://app.powerbi.com/view?r=eyJrIjoiYmU4NmYxMmEtZjY1OS00M2QxLWFlNjYtYWMwNzhkZjYzZDMxIiwidCI6IjYwM2JjZmY3LTc0OWQtNGYxNy04MTRmLTQ3ZjEzYjU2ZGJkNSJ9)
 
