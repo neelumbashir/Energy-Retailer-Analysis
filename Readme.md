@@ -1,5 +1,5 @@
 # Energy Retailer Performance: Customers in Financial Difficulty 
-[![View Dashboard](https://img.shields.io/badge/Power%20BI-View%20Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://app.powerbi.com/view?r=eyJrIjoiYmU4NmYxMmEtZjY1OS00M2QxLWFlNjYtYWMwNzhkZjYzZDMxIiwidCI6IjYwM2JjZmY3LTc0OWQtNGYxNy04MTRmLTQ3ZjEzYjU2ZGJkNSJ9)
+[View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYmU4NmYxMmEtZjY1OS00M2QxLWFlNjYtYWMwNzhkZjYzZDMxIiwidCI6IjYwM2JjZmY3LTc0OWQtNGYxNy04MTRmLTQ3ZjEzYjU2ZGJkNSJ9)
 
 An end-to-end data analysis project in **R**, modelled on how an energy regulator uses retailer data to identify consumer harm and target compliance activity.
 
